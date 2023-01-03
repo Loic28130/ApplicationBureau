@@ -13,13 +13,13 @@ namespace WpfApp1.DAL
             // select * from client where email = informationDeConnexionDTO.Email etc....
             // execution requete
             // Gets and prints all books in database
-            AdminDto client = null;
+            AdminDto admin = null;
             using (var context = new MonProjetDBcontext())
             {
                 var collaborateurs = context.Collaborateurs.Where(collabo => collabo.Email.Equals(informationDeConnexionDTO.Email) && collabo.MotDePasse.Equals(informationDeConnexionDTO.MotDePasse)).FirstOrDefault();
                 if(collaborateurs != null)
                 {
-                    client = new AdminDto()
+                    admin = new AdminDto()
                     {
                         ID = collaborateurs.IdCollaborateur,
                         Nom = collaborateurs.Nom,
@@ -28,7 +28,7 @@ namespace WpfApp1.DAL
                 }
             }
 
-            return client;
+            return admin;
         }
     }
 

@@ -14,11 +14,11 @@ namespace WpfApp1.BusinessLogic
 
         public bool Connexion(InformationDeConnexionDTO connexionDTO)
         {
-            AdminDal clientDAL = new AdminDal();
+            AdminDal adminDAL = new AdminDal();
 
-            var client = clientDAL.Select(connexionDTO);
+            var admin = adminDAL.Select(connexionDTO);
 
-            if(client == null)
+            if(admin == null)
             {
                 return false;                
             }
