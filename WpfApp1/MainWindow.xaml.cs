@@ -16,14 +16,16 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var client = new ClientDto();
-            client.Nom = tb_test.Text;
-            client.Prenom = "pouet";
+            // Recuperation des infos
+            var connexionDto = new InformationDeConnexionDTO();
+            connexionDto.Email = tb_Email.Text;
+            connexionDto.MotDePasse = pb_MotDePasse.Password;
 
-            var clientBu = new ClientBusinessLogic();
-            clientBu.Inscription(client);
+            // Connexion
+            var clientBu = new AdminBusinessLogic();
+            var estConnecter = clientBu.Connexion(connexionDto);
 
-            MessageBox.Show($"inscritpion du client {client.Nom} effectué");
+            MessageBox.Show($"estco {estConnecter}");
         }
     }
 }

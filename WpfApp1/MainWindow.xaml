@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="352,168,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBox x:Name="tb_test" HorizontalAlignment="Left" Margin="285,107,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+    <Grid RenderTransformOrigin="0.498,0.385">
+        <Button Content="Connexion" HorizontalAlignment="Left" Margin="325,271,0,0" VerticalAlignment="Top" Click="Button_Click" Height="32" Width="133"/>
+        <TextBox x:Name="tb_Email" HorizontalAlignment="Left" Margin="254,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" RenderTransformOrigin="0.512,0.631" Height="33"/>
+        <Label Content="email" HorizontalAlignment="Left" Margin="156,116,0,0" VerticalAlignment="Top" Width="82"/>
+        <Label Content="mot de passe" HorizontalAlignment="Left" Margin="156,188,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.512,0.621"/>
+        <PasswordBox x:Name="pb_MotDePasse" HorizontalAlignment="Left" Margin="254,181,0,0" VerticalAlignment="Top" Width="275" Height="33"/>
 
     </Grid>
 </Window>

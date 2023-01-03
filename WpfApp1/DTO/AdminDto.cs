@@ -1,7 +1,8 @@
 ﻿namespace WpfApp1.DTO
 {
-    public class ClientDto
+    public class AdminDto
     {
+        public int ID { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
 
