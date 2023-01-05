@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using WpfApp1.DTO;
+﻿using WpfApp1.DTO;
 using WpfApp1.EF;
 
 namespace WpfApp1.DAL
@@ -17,7 +15,7 @@ namespace WpfApp1.DAL
             using (var context = new MonProjetDBcontext())
             {
                 var collaborateurs = context.Collaborateurs.Where(collabo => collabo.Email.Equals(informationDeConnexionDTO.Email) && collabo.MotDePasse.Equals(informationDeConnexionDTO.MotDePasse)).FirstOrDefault();
-                if(collaborateurs != null)
+                if (collaborateurs != null)
                 {
                     admin = new AdminDto()
                     {

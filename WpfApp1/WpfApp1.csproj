@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.7" />
+    <ProjectReference Include="..\WpfApp1.Bibliotheque\WpfApp1.Bibliotheque.csproj" />
   </ItemGroup>
 
 </Project>
