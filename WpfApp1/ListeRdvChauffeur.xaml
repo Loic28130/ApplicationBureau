@@ -9,6 +9,6 @@
       Title="ListeRdvChauffeur">
 
     <Grid>
-        <DataGrid x:Name="datagridRdv"/>
+        <DataGrid x:Name="datagridRdv" IsEnabled="False"/>
     </Grid>
 </Page>
