@@ -11,5 +11,20 @@ namespace WpfApp1.Bibliotheque.BusinessLogic
 
             return rdvChauffeurDal.ListRvdChauffeur();
         }
+
+        public ListRdvAvecCollaborateur ListRvdChauffeurAvecCollaborateur()
+        {
+            var rdvChauffeurs = ListRvdChauffeur();
+
+            var collaborateurDal = new CollaborateurDal();
+
+            var collaborateurs = collaborateurDal.ListeCollaborateurs();
+
+            return new ListRdvAvecCollaborateur
+            {
+                Collaborateurs = collaborateurs,
+                Rdvs = rdvChauffeurs
+            };
+        }
     }
 }

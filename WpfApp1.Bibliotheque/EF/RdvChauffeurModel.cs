@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using WpfApp1.EF;
 
 namespace WpfApp1.Bibliotheque.EF
 {
@@ -24,8 +25,14 @@ namespace WpfApp1.Bibliotheque.EF
         
         [Column("IDclient")]
         public int IDClient { get; set; }
-        
+
+        [ForeignKey("IDClient")]
+        public ClientModel Client { get; set; }
+
         [Column("ID_collaborateurs")]
         public int? IDCollaborateur { get; set; }
+
+        [ForeignKey("IDCollaborateur")]
+        public CollaborateurModel? Collaborateur { get; set; }
     }
 }

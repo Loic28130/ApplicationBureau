@@ -25,14 +25,16 @@ namespace WpfApp1
         public ListeRdvChauffeur()
         {
             InitializeComponent();
-            datagridRdv.ItemsSource = GetRdvDtos();
+            var rdvsAvecCollabo = GetRdvsAvecCollabo();
+            datagridRdv.ItemsSource = rdvsAvecCollabo.Rdvs;
+            dgcb_collab.ItemsSource = rdvsAvecCollabo.Collaborateurs;
         }
-
-        private IEnumerable<RdvDto> GetRdvDtos()
+        
+        private ListRdvAvecCollaborateur GetRdvsAvecCollabo()
         {
             var rdvChauffeurBusinessLogic = new RdvChauffeurBusinessLogic();
 
-            return rdvChauffeurBusinessLogic.ListRvdChauffeur();
+            return rdvChauffeurBusinessLogic.ListRvdChauffeurAvecCollaborateur();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -41,5 +43,7 @@ namespace WpfApp1
             Uri uri = new Uri("Test.xaml", UriKind.Relative);
             nav.Navigate(uri);
         }
+
+        
     }
 }

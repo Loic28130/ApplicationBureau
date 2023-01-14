@@ -6,5 +6,10 @@
         public string LieuxDepart { get; set; }
         public string AdresseArrivee { get; set; }
         public string Date { get; set; }
+        public string HeureDeDepart { get; set; }
+
+        public ClientDTO Client { get; set; }
+
+        public CollaborateurDto Collaborateur { get; set; }
     }
 }

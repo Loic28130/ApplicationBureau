@@ -9,6 +9,17 @@
       Title="ListeRdvChauffeur">
 
     <Grid>
-        <DataGrid x:Name="datagridRdv" IsEnabled="False"/>
+        <DataGrid x:Name="datagridRdv"  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nom collabo" Binding="{Binding Collaborateur.Nom}" />
+                <DataGridTextColumn Header="Nom client" Binding="{Binding Client.Nom}" />
+                <DataGridTextColumn Header="Prenom client" Binding="{Binding Client.Prenom}" />
+                <DataGridTextColumn Header="LieuxDepart" Binding="{Binding LieuxDepart}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Adresse d'arrivee" Binding="{Binding AdresseArrivee}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Heure de depart" Binding="{Binding HeureDeDepart }" IsReadOnly="True" />
+                <DataGridComboBoxColumn x:Name="dgcb_collab" Header="Collaborateur" DisplayMemberPath="Nom" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

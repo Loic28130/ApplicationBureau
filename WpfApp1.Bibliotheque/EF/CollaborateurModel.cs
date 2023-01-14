@@ -1,11 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WpfApp1.EF
 {
     [Table("collaborateurs")]
-    internal class CollaborateurModel
+    public class CollaborateurModel
     {
         [Column("ID_collaborateurs")]
+        [Key]
         public int IdCollaborateur { get; set; }
 
         [Column("nom")]
