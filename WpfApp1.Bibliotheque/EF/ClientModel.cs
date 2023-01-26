@@ -6,7 +6,7 @@ namespace WpfApp1.Bibliotheque.EF
     [Table("clients")]
     public class ClientModel
     {
-        [Column("IDclient")]
+        [Column("ID_clients")]
         [Key]
         public int IdClient { get; set; }
 
@@ -19,7 +19,7 @@ namespace WpfApp1.Bibliotheque.EF
         [Column("email")]
         public string Email { get; set; }
 
-        [Column("MotDePasse")]
+        [Column("mot_de_passe")]
         public string MotDePasse { get; set; }
     }
 }

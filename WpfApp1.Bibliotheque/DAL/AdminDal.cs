@@ -14,7 +14,7 @@ namespace WpfApp1.DAL
             AdminDto admin = null;
             using (var context = new MonProjetDBcontext())
             {
-                var collaborateurs = context.Collaborateurs.Where(collabo => collabo.Email.Equals(informationDeConnexionDTO.Email) && collabo.MotDePasse.Equals(informationDeConnexionDTO.MotDePasse)).FirstOrDefault();
+                var collaborateurs = context.Collaborateurs.Where(collabo => collabo.Email.Equals(informationDeConnexionDTO.Email) && collabo.MotDePasse.Equals(informationDeConnexionDTO.MotDePasse) && collabo.Admin.Equals(true)).FirstOrDefault();
                 if (collaborateurs != null)
                 {
                     admin = new AdminDto()

@@ -11,19 +11,19 @@ namespace WpfApp1.Bibliotheque.EF
         [Key]
         public int IdRdvChauffeur { get; set; }
         
-        [Column("lieux de depart")]
+        [Column("adresse_de_depart")]
         public string LieuxDeDepart { get; set; }
         
-        [Column("adresse arrivee")]
+        [Column("adresse_arrivee")]
         public string AdresseArrivee { get; set; }
         
-        [Column("date de depart")]
+        [Column("date_de_depart")]
         public string DateDeDepart { get; set; }
         
-        [Column("heure de depart")]
+        [Column("heure_de_depart")]
         public string HeureDeDepart { get; set; }
         
-        [Column("IDclient")]
+        [Column("ID_clients")]
         public int IDClient { get; set; }
 
         [ForeignKey("IDClient")]
