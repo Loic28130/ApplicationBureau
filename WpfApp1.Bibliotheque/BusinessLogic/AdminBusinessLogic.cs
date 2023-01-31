@@ -5,12 +5,6 @@ namespace WpfApp1.BusinessLogic
 {
     public class AdminBusinessLogic
     {
-        public void Inscription(AdminDto clientDto)
-        {
-            var clientDal = new AdminDal();
-
-            //clientDal.Select(clientDto);
-        }
 
         public bool Connexion(InformationDeConnexionDTO connexionDTO)
         {
